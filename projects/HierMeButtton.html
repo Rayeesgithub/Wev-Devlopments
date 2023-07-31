@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #wrapper{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button{
+            display: flex;
+            height: 100px;
+                    width: 180px;
+            font-size: 30px;
+            background-color: brown;
+            color: white;
+           justify-content: center;
+           align-items: center;
+           box-shadow: 5px,5px,6px,0px black;
+     position: relative;
+     z-index: 1;
+        }
+       .button::before{
+        content: "";
+        background-color: black;
+        position: absolute;
+        top: 0;  left: 0; right: 0; bottom: 0;
+        transform: scaleX(0);
+        transition: all 1s;
+        transform-origin: left;
+        z-index: -1;
+       }
+       .button:hover::before{
+        transform: scaleX(1);
+       }  
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="button">Hier me</div>
+    </div>
+</body>
+</html>

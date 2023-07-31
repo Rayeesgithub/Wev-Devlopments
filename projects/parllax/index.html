@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parllax</title>
+    <style>
+        
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+#wrapper{
+    height:100vh;
+    overflow-x:hidden;
+  
+    /* ek image pass or dusre image ke door rakna hai tho hme prespective on karna  hoga  ya 3d ke liye*/
+    perspective:10px;
+}
+
+.container{
+    /* image ko absolute (ovelap)ke non static position ka use karna hoga isliye we use relative */
+    position:relative;
+    display: flex;
+    /* aligenitems and justifycentrea se adventure text centre me hojayaga */
+    justify-content:center;
+    align-items:center;
+    height:100%;
+    /* yaha 3d properties ko presereve rakhenge */
+    transform-style: preserve-3d;
+   z-index: -1;
+}
+
+.background{
+    transform:translateZ(-40px) scale(5);
+}
+
+.foreground{
+    transform:translateZ(-20px) scale(3);
+}
+/* yaha backgrond and foregrond image ko overlape kr denge or position ko abosolute kr denge */
+.background, .foreground{
+    position:absolute;
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    /* jb do se jaya overlopaing hota hai toh z index ka use karenge */
+    z-index:-1;
+}
+h1{
+    position: absolute;
+    top: 5rem;
+    left: 30%;
+    transform: translate(-22%);
+    color: cyan;
+    font-size: 10rem;
+    text-shadow: 0cap;
+}
+section{
+background-color: rgb(45, 45, 45);
+color: white;
+padding: 5rem;
+
+}
+.rayees{
+    font-size: 5rem;
+    padding: 0 10rem;
+}
+.text{
+    font-size:1.6rem ;
+    padding: 0 10rem;
+    margin: 5rem 0;
+}
+.bg{
+    position: relative;
+    width: 100%;
+    /* isse biking wali umage fixed ho jayegi */
+    background-attachment: fixed;
+    height: 500px;
+    background-position: center;
+    /* ager image badi hai cover  kr ke chotte kr sakte hai */
+    background-size: cover;
+}
+.des{
+    position: absolute;
+    background-color: white;
+    color: black;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%)  translateX(-50%) ;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+.bg1{
+    background-image: url(images/sport-1.jpg);
+}
+.bg2{
+    background-image: url(images/sport-2.jpg);
+}
+.bg3{
+    background-image: url(images/sport-3.jpg);
+}
+    </style>
+</head>
+<body>
+
+    <div id="wrapper">
+
+        <div class="container">
+            <img src="background.png" class="background">
+            <img src="https://wallpaperaccess.com/full/1503418.jpg" class="foreground">
+            <h1>ADVENTURE</h1>
+        </div>
+  
+<section>
+ <h2 class="rayees">Adventure Time!</h2>
+    <p class="text">Throughout the show's ten seasons, Finn and Jake go on countless adventures, battling evil villains and meeting a cast of colorful characters along the way. 
+        The show is known for its whimsical humor, vibrant animation, and deep emotional themes, exploring topics such as love, loss, and the meaning of life.
+  <br><br>
+        Adventure Time has become a cultural phenomenon, gaining a devoted fanbase and numerous accolades.
+         The show has won eight Pr, its imaginative storytelling and unique visual style. It has also spawned comic books,
+          video games, and even a feature-length film
+          Adventure Time has become a cultural phenomenon, gaining a devoted fanbase and numerous accolades. The show has won eight Primetime Emmy Awards, 
+           its imaginative storytelling and unique visual style</p>
+      <div class="bg bg1">
+        <h2 class="des">BIKING</h2>
+      </div> 
+      <p class="text">There are various types of biking, including road biking, mountain biking, BMX, and indoor cycling. 
+        Each type has its own set of equipment, techniques, and safety precautions. <br>
+        It's important to wear appropriate safety gear, such as a helmet and reflective clothing, and to follow traffic
+         laws and biking etiquette when riding on roads and paths.
+
+        Biking is a great way to stay active, connect with nature,Biking is a great way to stay active, connect with nature, and have fun. Whether you're a casual rider or a serious cyclist,
+         there are plenty of opportunities to explore and enjoy the world on two wheels.</p> 
+        <div class="bg bg2">
+            <h2 class="des">PARAGLADING</h2>
+        </div>
+            <p class="text">Paragliding can provide a unique and thrilling experience,
+                 allowing participants to soar through the air and take in breathtaking views from a unique perspective. It requires skill, training, and a high level of physical fitness and mental readiness, 
+                as there are inherent risks involved with the sport.Proper training and equipment are essential for safe and enjoyable paragliding. 
+                Participants should receive instruction from a qualified instructor, wear proper safety gear such as a helmet and a harness, 
+                and adhere to safety guidelines and regulations.
+
+                Overall, paragliding can provide a unique and exhilarating experience for those who are i
+                nterested in adventure sports and enjoy exploring the skies in a unique way.</p>
+                <div class="bg bg3">
+                    <h2 class="des">SURFING</h2>
+                    </div>
+                    <p class="text">Surfing is a water sport that involves riding on the waves of 
+                        the ocean or other bodies of water using a specially designed board. Surfers use their balance,
+                         agility, and knowledge of the ocean to ride waves, perform tricks, and maneuver through the water.
+                         Surfing can provide a thrilling and exciting experience, as well as being a great form of exercise and a way to connect with nature. 
+                         It requires strength, balance, and coordination, as well as an understanding of the ocean and weather conditions.
+                         Surfboards are designed with specific shapes and materials to suit different styles and skill levels of surfing. There are various types of surfboards, including shortboards, longboards, and stand-up paddleboards. 
+                         Each type has its own unique features and is used for different types of surfing and wave conditions
+                         To ensure safe and enjoyable surfing, it's important to have proper training and equipment. 
+                         Surfing has become a popular sport and cultural phenomenon, with many competitions 
+                         and events held worldwide.</p>
+
+
+</section> </div>
+
+    
+    
+</body>
+</html>
