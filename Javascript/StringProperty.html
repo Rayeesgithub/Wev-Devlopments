@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>The slice() Method</h2>
+    <h2>The substr() Method</h2>
+    <script>
+        let text = "Apple, Banana, Kiwi";
+        //If you omit the second parameter, the method will slice out the rest of the string:
+       let part = text.slice(7)
+       console.log(part);
+       part = text.slice(7, 13);
+
+       console.log(part);
+       //If a parameter is negative, the position is counted from the end of the string:
+       part = text.slice(-12);
+       console.log(part);
+
+       //substring() is similar to slice().
+       let str = "Apple, Banana, Kiwi";
+    let part2 = str.substring(7, 13);
+    console.log(part2);
+
+    // The replace() method replaces a specified value with another value in a string:
+    let word = "Please visit Microsoft!";
+    let newText = word.replace("Microsoft", "W3Schools");
+    console.log(newText);
+
+     /*A string is converted to upper case with toUpperCase():
+     A string is converted to lower case with toLowerCase():*/
+     let text1 = "Hello World!";
+    let text2 = text1.toUpperCase();
+    console.log(text2);
+       
+    let text3 = "Hello World!";       // String
+   let text4= text3.toLowerCase();  // text2 is text1 converted to lower
+   console.log(text4);
+
+   //The concat() method can be used instead of the plus operator. These two lines do the same:
+  let  tex = "Hello" + " " + "World!";
+   text = "Hello".concat(" ", "World!");
+   console.log(tex);
+
+    </script>
+</body>
+</html>

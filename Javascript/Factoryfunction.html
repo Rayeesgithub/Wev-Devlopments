@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Factory Function objects</h3>
+    <script>
+        function createPerson(name,age){
+         // Factory object
+    const person = {
+        name,
+        age,
+        sayHello() {
+            console.log(`Hello, my name is ${name} and I am ${age} years old.`);
+        },
+        revealSecret() {
+            console.log(`My secret is: ${name}`);
+        },
+    };
+
+    return person;
+}
+
+// Creating person objects using the factory function
+const person1 = createPerson('Rayees', 30);
+const person2 = createPerson('Rahul', 25);
+
+// Using the objects
+person1.sayHello(); // Output: Hello, my name is Alice and I am 30 years old.
+person2.sayHello(); // Output: Hello, my name is Bob and I am 25 years old.
+
+
+    </script>
+</body>
+</html>

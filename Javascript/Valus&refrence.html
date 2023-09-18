@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Pass by value and refrence</h3>
+    <script>
+        // pass by value->numnber,string,boolean,Null,bight
+        let a=10;
+        function func(a){
+          a=5; 
+        }
+        func(a);
+        console.log(a);
+        
+
+       // pass by refrence->objects,Arrray,function
+       let b = {value:10}
+       str(b);
+       console.log(b);
+ 
+          function str(b){
+           b.value=12;
+       }
+    </script>
+</body>
+</html>
